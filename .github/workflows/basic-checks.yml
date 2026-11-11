@@ -1,0 +1,30 @@
+
+name: Basic Project Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Check Python syntax
+        run: python -m py_compile password_checker.py
+
+      - name: Check project files
+        run: |
+          test -f README.md
+          test -f networking-basics.md
+          test -f cybersecurity-notes.md
