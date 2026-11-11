@@ -23,3 +23,9 @@ cybersecurity, networking and basic programming.
 ## Progress
 This repository will be updated as I develop my
 technical knowledge and practical skills.
+
+## Future Improvements
+- Learn more about network security.
+- Explore common network scanning techniques.
+- Improve the password checker.
+- Practise Git branching and collaboration.
